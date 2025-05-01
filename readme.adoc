@@ -1,0 +1,3 @@
+= Codion Single Module Application Template
+
+A simple template application based on the https://codion.is[Codion application framework], with only a local JDBC connection option.

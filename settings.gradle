@@ -1,0 +1,28 @@
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
+}
+
+rootProject.name = "template"
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    versionCatalogs {
+        libs {
+            version("codion", "0.18.34")
+            version("h2", "2.3.232")
+
+            library("codion-dbms-h2", "is.codion", "codion-dbms-h2").versionRef("codion")
+            library("codion-framework-domain-test", "is.codion", "codion-framework-domain-test").versionRef("codion")
+            library("codion-framework-db-local", "is.codion", "codion-framework-db-local").versionRef("codion")
+            library("codion-swing-framework-ui", "is.codion", "codion-swing-framework-ui").versionRef("codion")
+            library("codion-plugin-logback-proxy", "is.codion", "codion-plugin-logback-proxy").versionRef("codion")
+            library("codion-plugin-flatlaf", "is.codion", "codion-plugin-flatlaf").versionRef("codion")
+            library("codion-plugin-flatlaf-intellij-themes", "is.codion", "codion-plugin-flatlaf-intellij-themes").versionRef("codion")
+
+            library("h2", "com.h2database", "h2").versionRef("h2")
+        }
+    }
+}

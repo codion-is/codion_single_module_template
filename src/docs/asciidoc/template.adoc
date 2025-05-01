@@ -1,0 +1,82 @@
+= Codion Project Template
+:toc: left
+:imagesdir: images
+:root-dir: ../../..
+:dir-source: ../../main/java
+:dir-resources: ../../main/resources
+:dir-source-test: ../../test/java
+
+NOTE: For the Gradle build configuration see <<#_build, Build>> section.
+
+== SQL
+
+[source,sql,options="nowrap"]
+----
+include::{dir-resources}/create_schema.sql[]
+----
+
+== Domain model
+
+[source,java,options="nowrap"]
+----
+include::{dir-source}/is/codion/demos/template/domain/Template.java[]
+----
+
+[source,java,options="nowrap"]
+----
+include::{dir-source-test}/is/codion/demos/template/domain/TemplateTest.java[]
+----
+
+== Person
+
+=== UI
+
+[source,java,options="nowrap"]
+----
+include::{dir-source}/is/codion/demos/template/ui/PersonEditPanel.java[]
+----
+
+== Application model
+
+=== TemplateAppModel
+
+[source,java,options="nowrap"]
+----
+include::{dir-source}/is/codion/demos/template/model/TemplateAppModel.java[]
+----
+
+== Application panel
+
+=== TemplateAppPanel
+
+[source,java,options="nowrap"]
+----
+include::{dir-source}/is/codion/demos/template/ui/TemplateAppPanel.java[]
+----
+
+== Module Info
+
+[source,java,options="nowrap"]
+----
+include::{dir-source}/module-info.java[]
+----
+
+== Build
+
+.settings.gradle
+[%collapsible]
+====
+[source,kotlin,options="nowrap"]
+----
+include::{root-dir}/settings.gradle[]
+----
+====
+
+.build.gradle.kts
+[%collapsible]
+====
+[source,kotlin,options="nowrap"]
+----
+include::{root-dir}/build.gradle.kts[]
+----
+====
