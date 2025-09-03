@@ -37,8 +37,8 @@ public final class TemplateAppPanel extends EntityApplicationPanel<TemplateAppMo
 		EntityApplicationPanel.builder(TemplateAppModel.class, TemplateAppPanel.class)
 						.applicationName("Template")
 						.applicationVersion(TemplateAppModel.VERSION)
-						.domainType(Template.DOMAIN)
-						.displayStartupDialog(false)
+						.domain(Template.DOMAIN)
+						.startupDialog(false)
 						.defaultLookAndFeel(Arc.class)
 						.defaultUser(User.parse("scott:tiger"))
 						.start();
